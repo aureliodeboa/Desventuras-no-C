@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <conio.h> //getch(l? um car?cter do teclado e n?o o mostra na tela)
+#include <locale.h> // Para poder p?r acentos no programa
+void HEADER(void) 
+{
+	printf("----------------------------------------------------\n");
+	printf("---------------GESTOR DE ESTOQUE--------------------\n");
+	printf("----------------------------------------------------\n"); 
+	printf("----------------SEjA BEM VINDO----------------------\n");
+	printf("----------------------------------------------------\n\n");
+} 
+void OPTIONS(void) // op??es dadas pelo programa 
+{
+	printf("(1) CADASTRO\n");
+	printf("(2) VENDA\n");
+	printf("(3) CONSULTA\n");
+	printf("(4) EXCLUS?O DE DADOS\n");
+	printf("(5) FINALIZAR PROGRAMA\n\n");
+	printf("ESCOLHA UMA OP??O: ");
+}
+int main()
+{   setlocale(LC_ALL, "Portuguese"); // Acentos no programa 
+	int opcao ;
+	HEADER();
+	do{
+		OPTIONS();
+		scanf("%i",&opcao);
+		switch(opcao){
+		case 1: // CADASTRO
+		break;
+		case 2: // VENDA
+		break;
+		case 3: // CONSULTA
+		break;
+		case 4: //EXCLUS?O DE DADOS 
+		break;
+		case 5: //SAIR 
+			printf("AT? A PR?XIMA! ");
+			getch();
+		break;
+		default:
+			printf("OP??O INV?LIDA!\n\n");
+			getch();
+		break;
+		}
+	}while(opcao != 5);
+}

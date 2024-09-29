@@ -1,0 +1,35 @@
+#include <stdio.h> 
+#include <stdlib.h> 
+#define aurelio 500
+float LUCRO(float a, float b)
+{
+	float lucrot = ((b*100)/ a) - 100 ;
+	return(lucrot);
+}
+typedef struct
+{ 
+    int dia;
+    int mes;
+    int ano;
+} data;
+typedef struct
+{
+    char tipo[50];
+    data dataC;
+    int quantidade;
+    float custo;
+    float preco;
+    float lucro;
+
+} CADASTRO;
+main()
+{   int i;
+    CADASTRO  vet_cad[2];
+    for(i=0;i<2;i++)
+    {
+        scanf("%s",vet_cad[i].tipo);
+        
+    }
+
+
+}

@@ -1,0 +1,29 @@
+#include <stdio.h>
+struct data
+{	int dia;
+	int mes;
+	int ano;
+};
+typedef struct
+{
+	struct data data_entrada;
+	float preco;
+	float custo;
+} roupa ;
+main()
+{	float lucro;
+    roupa calca;
+	printf("Digite a data da entrada da roupa(digite com espa?o entre o dia, mes e ano): ");
+	scanf("%i %i %i",&calca.data_entrada.dia,&calca.data_entrada.mes,&calca.data_entrada.ano);
+	printf("Digite o custo de compra do produto: ");
+	scanf("%f",&calca.custo); 
+	printf("Digite o pre?o de venda do produto: ");
+	scanf("%f",&calca.preco);
+	lucro =  ((calca.preco * 100)/calca.custo) - 100;
+	printf("Data de entrada: %i/%i/%i \n",calca.data_entrada.dia,calca.data_entrada.mes,calca.data_entrada.ano);
+	printf("Custo da compra: %.2f\tCusto de venda: %.2f\n",calca.custo,calca.preco);
+	printf("O valor do lucro foi de %.2f%%",lucro);
+	
+   
+    
+}
